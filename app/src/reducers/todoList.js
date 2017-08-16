@@ -1,4 +1,4 @@
-const todoList = (todos, action) => {
+const todoList = (todos = [], action) => {
   switch(action) {
     case 'SHOW_ALL':
       return todos
@@ -7,6 +7,7 @@ const todoList = (todos, action) => {
     case 'SHOW_ACTIVE':
       return todos.filter(todo => !todo.completed)
   }
+  return todos;
 }
 
-export default todoList
+export default todoList;

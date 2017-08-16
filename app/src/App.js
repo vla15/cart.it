@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
 
-
-const mapStateToProps = state => {store: state}
-}
+const mapStateToProps = state => {
+  return {store: state}
+};
 
 const mapDispatchToProps = dispatch => {
   return {
-    dispatch:
+    dispatch: {}
   }
 }
 

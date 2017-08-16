@@ -1,11 +1,16 @@
-import React from 'react'
 import todoList from './reducers/todoList.js';
-import logger from 'logger';
-
+import views from './reducers/views.js'
+import logger from 'redux-logger';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
+
+
 let store = createStore(
   combineReducers({
-    todoList: todoList
+    todoList: todoList,
+    view: views
   }),
   applyMiddleware(logger)
 );
+
+
+export default store;
