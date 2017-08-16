@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
+
+
+const mapStateToProps = state => {store: state}
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    dispatch:
+  }
+}
 
 class App extends Component {
   render() {
@@ -18,4 +29,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
